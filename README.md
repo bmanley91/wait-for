@@ -27,3 +27,6 @@ const result = await waitFor(
     30000
 );
 ```
+
+## Publishing Changes
+To publish changes increment the version number appropriately. Then, run `npm publish`. NPM will automattically run the `prepublish` script to assure the code compiles and that tests pass.

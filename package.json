@@ -1,6 +1,6 @@
 {
   "name": "@bmanley91/wait-for",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A testing library that waits for the given function to return an expected condition.",
   "main": "lib/index.js",
   "scripts": {
