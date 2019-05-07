@@ -13,8 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/bmanley91/wait-for.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Brian Manley <brian.manley91@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bmanley91/wait-for/issues"
   },
