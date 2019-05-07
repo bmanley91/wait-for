@@ -1,8 +1,8 @@
 {
-  "name": "wait-for",
-  "version": "1.0.0",
+  "name": "@bmanley91/wait-for",
+  "version": "0.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
     "build-and-test": "npm run check && npm run build && npm run test",
