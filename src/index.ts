@@ -1,4 +1,3 @@
-
 export const waitFor = async <T>(call: () => Promise<T>, condition: (input: T) => boolean, ms: number): Promise<T> => {
     let result: T = await call();
     const timeout: number = Date.now() + ms;
