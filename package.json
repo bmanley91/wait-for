@@ -1,12 +1,14 @@
 {
   "name": "@bmanley91/wait-for",
   "version": "0.0.2",
-  "description": "",
+  "description": "A testing library that waits for the given function to return an expected condition.",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
     "build-and-test": "npm run check && npm run build && npm run test",
+    "clean": "rimraf lib",
     "check": "./node_modules/.bin/eslint src/",
+    "prepublish": "npm run clean && npm run build-and-test",
     "test": "mocha --require @babel/register test/*.js --timeout 10000"
   },
   "repository": {
@@ -31,7 +33,14 @@
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "mocha": "^6.1.4",
+    "rimraf": "^2.6.3",
     "sinon": "^7.3.2",
     "sinon-chai": "^3.3.0"
-  }
+  },
+  "keywords": [
+    "test",
+    "wait",
+    "waiting",
+    "testing"
+  ]
 }
