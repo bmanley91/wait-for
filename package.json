@@ -1,0 +1,25 @@
+{
+  "name": "wait-for",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmanley91/wait-for.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmanley91/wait-for/issues"
+  },
+  "homepage": "https://github.com/bmanley91/wait-for#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^11.13.4",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.2"
+  }
+}
