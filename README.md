@@ -1,6 +1,9 @@
 # wait-for
 Wait for is a testing utility used for when a test needs to wait for a condition to become true. It will repeadely call a function until the supplied condition becomes true.
 
+## Installation 
+Install with `npm install --save @bmanley91/wait-for`
+
 ## Usage
 `waitFor` is called with three parameters:
 * `call` - The function to call. This function can be async.
@@ -10,12 +13,17 @@ Wait for is a testing utility used for when a test needs to wait for a condition
 `waitFor` resolves to the return value of `call` if the expected `condition` is met. Otherwise it rejects with a Timeout Error.
 
 ### Example
-The following code will repeatedly call `mockFunction` until it returns `1` or 30 seconds has passed.
+The following code will repeatedly call `makeRestCall` until a status code of [429](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) is returned or 30 seconds has passed.
 ```
-const expectedValue = 1;
+async function makeRestCall() {
+    // Make a call to an external API.
+    // Returns a body with a status code.
+}
+
+const expectedStatusCode = 429;
 const result = await waitFor(
-    mockFunction,
-    x => x === expectedValue,
+    makeRestCall,
+    body => body.statusCode === expectedStatusCode,
     30000
 );
 ```
