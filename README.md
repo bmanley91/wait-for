@@ -15,6 +15,23 @@ Install with `npm install --save @bmanley91/wait-for`
 ### Example
 The following code will repeatedly call `makeRestCall` until a status code of [429](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) is returned or 30 seconds has passed.
 ```
+async function makeRestCall(url, body) {
+    // Make a call to an external API.
+    // Returns a body with a status code.
+}
+
+const targetUrl = "foo.bar"
+const body = { param: "thing" };
+
+const expectedStatusCode = 429;
+const result = await waitFor(
+    async () => makeRestCall(targetUrl, body),
+    body => body.statusCode === expectedStatusCode,
+    30000
+);
+```
+
+To call a function with the same parameters repeatedly, an arrow function containing the function to be called can be used.
 async function makeRestCall() {
     // Make a call to an external API.
     // Returns a body with a status code.
