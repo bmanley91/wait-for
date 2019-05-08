@@ -32,6 +32,7 @@ const result = await waitFor(
 ```
 
 To call a function with the same parameters repeatedly, an arrow function containing the function to be called can be used.
+```
 async function makeRestCall() {
     // Make a call to an external API.
     // Returns a body with a status code.
